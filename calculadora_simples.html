@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples de Capacidade de Armazenamento - CFTV</title>
+    <link rel="stylesheet" href="calculadora_simples.css">
+</head>
+<body>
+    <div class="container">
+        <span class="tooltip" data-tooltip="Os parâmetros adotados são 15fps, qualidade de vídeo média, compressão h.264 e atividade de cena 100%, para maior precisão, usar ferramenta avançada">&#x1F6C8;</span>
+        <img src="xelpon2.png" alt="Logo" />
+        <h1>Calculadora de Capacidade de Armazenamento - CFTV</h1>
+        <div class="form-group">
+            <label for="numeroCameras">Número de Câmeras:</label>
+            <input type="number" id="numeroCameras" placeholder="Número de Câmeras">
+        </div>
+        <div class="form-group">
+            <label for="resolucaoVideo">Resolução de Vídeo:</label>
+            <select id="resolucaoVideo">
+                <option value="2">2MP (FullHD)</option>
+                <option value="3">3MP</option>
+                <option value="4">4MP</option>
+                <option value="5">5MP</option>
+                <option value="6">6MP</option>
+                <option value="8">8MP (4K)</option>
+                <option value="12">12MP</option>
+                <option value="16">16MP (8k)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="horasPorDia">Horas de Gravação por Dia:</label>
+            <select id="horasPorDia">
+                <option value="24">Gravação Contínua (24 horas)</option>
+                <option value="8">Gravação por Detecção de Movimento (8 horas)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="duracaoGravacao">Duração da Gravação (em dias):</label>
+            <input type="number" id="duracaoGravacao" placeholder="Duração da Gravação (em dias)">
+        </div>
+        <button onclick="calcularCapacidade()">Calcular</button>
+        <div id="resultado" class="result" style="display: none;"></div>
+        <p><a href="calculadoraxelpon.html">Calculadora Avançada</a></p>
+    </div>
+    <script src="calculadora_simples.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Capacidade de Armazenamento - CFTV</title>
+    <link rel="stylesheet" href="calculadoraxelpon.css">
+</head>
+<body>
+    <div class="container">
+        <img src="xelpon2.png" alt="Logo" />
+        <h1>Calculadora de Capacidade de Armazenamento - CFTV</h1>
+        <div class="form-group">
+            <label for="numeroCameras">Número de Câmeras:</label>
+            <input type="number" id="numeroCameras" placeholder="Número de Câmeras">
+        </div>
+        <div class="form-group">
+            <label for="resolucaoVideo">Resolução de Vídeo:</label>
+            <select id="resolucaoVideo">
+                <option value="2">2MP (FullHD)</option>
+                <option value="3">3MP</option>
+                <option value="4">4MP</option>
+                <option value="5">5MP</option>
+                <option value="6">6MP</option>
+                <option value="8">8MP (4K)</option>
+                <option value="12">12MP</option>
+                <option value="16">16MP (8k)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="taxaQuadros">Taxa de Quadros (fps): <span class="tooltip" data-tooltip="FPS (Frames por Segundo) é a quantidade de imagens exibidas por segundo em um vídeo ou animação. Quanto maior o FPS, mais suave e fluida é a exibição.">&#x1F6C8;</span></label>
+            <input type="number" id="taxaQuadros" placeholder="Taxa de Quadros (fps)">
+        </div>
+        <div class="form-group">
+            <label for="duracaoGravacao">Duração da Gravação (em dias):</label>
+            <input type="number" id="duracaoGravacao" placeholder="Duração da Gravação (em dias)">
+        </div>
+        <div class="form-group">
+            <label for="horasPorDia">Horas de Gravação por Dia:</label>
+            <select id="horasPorDia">
+                <option value="1">1 hora</option>
+                <option value="2">2 horas</option>
+                <option value="3">3 horas</option>
+                <option value="4">4 horas</option>
+                <option value="5">5 horas</option>
+                <option value="6">6 horas</option>
+                <option value="7">7 horas</option>
+                <option value="8">8 horas</option>
+                <option value="9">9 horas</option>
+                <option value="10">10 horas</option>
+                <option value="11">11 horas</option>
+                <option value="12">12 horas</option>
+                <option value="13">13 horas</option>
+                <option value="14">14 horas</option>
+                <option value="15">15 horas</option>
+                <option value="16">16 horas</option>
+                <option value="17">17 horas</option>
+                <option value="18">18 horas</option>
+                <option value="19">19 horas</option>
+                <option value="20">20 horas</option>
+                <option value="21">21 horas</option>
+                <option value="22">22 horas</option>
+                <option value="23">23 horas</option>
+                <option value="24">24 horas</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="qualidadeVideo">Qualidade de Vídeo: <span class="tooltip" data-tooltip="É um termo utilizado para descrever a resolução, clareza e nitidez de um vídeo. É uma medida da capacidade do vídeo em transmitir imagens de alta definição, cores precisas e detalhes nítidos.">&#x1F6C8;</span></label>
+            <select id="qualidadeVideo">
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="compressaoVideo">Compressão de Vídeo: <span class="tooltip" data-tooltip="Compressão de vídeo é o processo de reduzir o tamanho do arquivo de um vídeo removendo dados redundantes ou menos perceptíveis, mantendo a qualidade visual o máximo possível.">&#x1F6C8;</span></label>
+            <select id="compressaoVideo">
+                <option value="h264">H.264</option>
+                <option value="h265">H.265</option>
+                <option value="h265+">H.265+</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="atividadeCena">Atividade de Cena: <span class="tooltip" data-tooltip="Nível de atividade ou movimento capturado, quanto maior atividade ou movimento da cena, mais espaço será ocupado">&#x1F6C8;</span></label>
+            <input type="range" id="atividadeCena" min="1" max="100" value="50" oninput="updateAtividadeCenaValue(this.value)" style="padding-left: 0px; padding-right: 0px;">
+            <span id="atividadeCenaValue">50%</span>
+        </div>
+        <button onclick="calcularCapacidade()">Calcular</button>
+        <div id="resultado" class="result" style="display: none;"></div>
+        <p><a href="calculadora_simples.html">Calculadora Simples</a></p>
+    </div>
+    <script src="calculadoraxelpon.js"></script>
+</body>
+</html>
